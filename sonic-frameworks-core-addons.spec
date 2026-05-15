@@ -11,7 +11,7 @@
 %global __requires_exclude ^.*procstat.*
 
 Name: sonic-frameworks-core-addons
-Version: 6.25.0
+Version: 6.26.0
 Release: %{?git:0.%{git}.}1
 URL:     https://github.com/Sonic-DE/sonic-frameworks-core-addons
 # %if 0%{?git:1}
