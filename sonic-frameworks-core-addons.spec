@@ -22,7 +22,7 @@ Source0: %url/archive/%version/%name-%version.tar.gz
 Summary: Qt addon library with a collection of non-GUI utilities
 License: CC0-1.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0
 Group: System/Libraries
-BuildRequires: cmake
+
 BuildRequires: cmake(ECM)
 BuildRequires: python
 BuildRequires: python%{pyver}dist(build)
@@ -86,6 +86,10 @@ Conflicts: python-kcoreaddons
 %description -n python-sonicframeworkscoreaddons
 %summary
 
+%install -a
+rm -rf %{buildroot}/%{_libdir}/cmake
+rm -rf %{buildroot}/%{_libdir}/pkgconfig
+
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kcoreaddons.*
 %{_datadir}/kf6
@@ -93,8 +97,10 @@ Conflicts: python-kcoreaddons
 
 %files -n %{devname}
 %{_includedir}/KF6/KCoreAddons
-%{_libdir}/cmake/KF6CoreAddons
-%{_libdir}/pkgconfig/KF6CoreAddons.pc
+
+# pending rename
+# %{_libdir}/cmake/KF6CoreAddons
+# %{_libdir}/pkgconfig/KF6CoreAddons.pc
 
 %files -n %{libname}
 %{_libdir}/libKF6CoreAddons.so*
