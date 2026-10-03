@@ -98,6 +98,7 @@ Conflicts: python-kcoreaddons
 %{_includedir}/KF6/KCoreAddons
 %{_libdir}/cmake/KF6CoreAddons
 %{_libdir}/pkgconfig/KF6CoreAddons.pc
+%{_qtdir}/metatypes/qt6kf6coreaddons_metatypes.json
 
 %files -n %{libname}
 %{_libdir}/libKF6CoreAddons.so*
