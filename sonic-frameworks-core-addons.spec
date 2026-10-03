@@ -88,8 +88,6 @@ Conflicts: python-kcoreaddons
 %summary
 
 %install -a
-rm -rf %{buildroot}/%{_libdir}/cmake
-rm -rf %{buildroot}/%{_libdir}/pkgconfig
 
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kcoreaddons.*
@@ -98,10 +96,8 @@ rm -rf %{buildroot}/%{_libdir}/pkgconfig
 
 %files -n %{devname}
 %{_includedir}/KF6/KCoreAddons
-
-# pending rename
-# %{_libdir}/cmake/KF6CoreAddons
-# %{_libdir}/pkgconfig/KF6CoreAddons.pc
+%{_libdir}/cmake/KF6CoreAddons
+%{_libdir}/pkgconfig/KF6CoreAddons.pc
 
 %files -n %{libname}
 %{_libdir}/libKF6CoreAddons.so*
